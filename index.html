@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&family=Patrick+Hand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/styles.css?v=11082021">
+<link rel="stylesheet" href="css/commit.01082021ac43f.css">
 <title>Stable 8% Daily - BNB Fish Farm</title>
 </head>
 <body>
@@ -128,8 +128,15 @@
         </div>
     </div>
     
+    <div class="notice" v-bind:class="{active:overlay.notice}" @click="closeNotice">
+        <h5>App Updates</h5>
+        <ul>
+            <li>Added: FIAT($) values below BNB values</li>
+            <li>Bugfix: Trust Wallet in Android cannot connect</li>
+        </ul>
+    </div>
+    
 </div>
-
 
 <script src="js/abi.contract.js"></script>
 <script src="js/vue.min.js"></script>
@@ -137,7 +144,7 @@
 <script src="js/web3m.min.js"></script>
 <script src="js/evm.min.js"></script>
 <script src="js/walletconnect.min.js"></script>
-<script src="js/commit.01082021c37a7.js"></script>
+<script src="js/commit.01082021ac43f.js"></script>
 
 </body>
 </html>
