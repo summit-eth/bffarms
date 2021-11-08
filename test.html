@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--script async src="https://www.googletagmanager.com/gtag/js?id=G-EFTK6S7YX7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EFTK6S7YX7');
+</script-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" href="favicon.ico">
+<meta property="og:title" content="BNB Fish Farm">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bnbfish.farm/">
+<meta property="og:image" content="https://bnbfish.farm/img/icon.png">
+<meta property="og:description" content="Stake & Earn a Stable 8% Daily from your BNB!">
+<style>body:not(.loaded) { visibility: hidden }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/styles.css?v=11082021">
+<title>Stable 8% Daily - BNB Fish Farm</title>
+</head>
+<body>
+hello
+<script src="js/abi.contract.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/evm.min.js"></script>
+<script src="js/walletconnect.min.js"></script>
+<script>
+
+
+
+window.addEventListener('load', async () => {
+ // Wait for loading completion to avoid race conditions with web3 injection timing.
+  if (window.ethereum) {
+    const web3 = new Web3(window.ethereum);
+    try {
+      // Request account access if needed
+      await window.ethereum.enable();
+      // Acccounts now exposed
+      alert("X");
+      return web3;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  // Legacy dapp browsers...
+  else if (window.web3) {
+    // Use Mist/MetaMask's provider.
+    const web3 = window.web3;
+    alert("Y");
+    console.log('Injected web3 detected.');
+    return web3;
+  }
+  // Fallback to localhost; use dev console port by default...
+  else {
+    const provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545');
+    const web3 = new Web3(provider);
+    console.log('No web3 instance injected, using Local web3.');
+    alert("Z");
+    return web3;
+  }
+});
+
+</script>
+</body>
+</html>
