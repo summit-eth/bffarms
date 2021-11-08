@@ -138,35 +138,7 @@
 <script src="js/web3m.min.js"></script>
 <script src="js/evm.min.js"></script>
 <script src="js/walletconnect.min.js"></script>
-<script type="text/javascript">
-
-window.addEventListener('load', async () => {
-    alert(1);
-  if (window.ethereum) {
-      alert(2);
-    const web3 = new Web3(window.ethereum);
-    alert(3);
-    try {
-        alert(4);
-      await window.ethereum.enable();
-      alert("X");
-      return web3;
-    } catch (error) {
-        alert(error);
-      console.error(error);
-    }
-    alert(5);
-  } else if (window.web3) {
-      alert("Y");
-    const web3 = window.web3;
-    alert(6);
-    console.log('Injected web3 detected.');
-    return web3;
-  }
-  alert(7)
-});
-
-</script>
+<script src="js/app.js?v=11082021"></script>
 
 </body>
 </html>
